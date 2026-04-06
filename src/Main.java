@@ -1,16 +1,14 @@
-public  class Main {
+public class Main {
     public static void main(String[] args){
-        Catalog catalog1 = new Catalog();
-        System.out.println(catalog1);
-        System.out.print(catalog1.id);
 
-        catalog1.id = "id";
-        catalog1.catalog("title");
-        catalog1.price = "price";
+        Electronics p1 = new Electronics("848848", "frjijgoi",1500,3747);
+        Garden l1 = new Garden("jjfiji", "a;ps;sl;", 234782,"74fjhfh");
 
-        Catalog catalog = new Catalog();
-        System.out.println(catalog1);
-        System.out.println(catalog1.id);
+        Garden sell = new Garden("dhed777", "Лопата", 50, "gjfjgjfgd");
+
+        System.out.println(p1.calcPrice());
+        System.out.println(sell.calcPrice());
+
 
     }
 }

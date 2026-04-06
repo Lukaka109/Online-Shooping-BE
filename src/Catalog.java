@@ -1,18 +1,23 @@
-public class Catalog {
-    String id;
-    private String title;
-    String price;
+import java.util.ArrayList;
 
-    public void catalog(String ID) {this.id = ID;}
+public abstract class Catalog {
+    ArrayList<Categories>mainCategories = new ArrayList<>();
 
-    public void product(String ID, String title){
-        this.id = ID;
-        this.title = title;
+    private int mainCategoryCount = 0;
+    private int subCategoryCount = 0;
+
+    public void addMainCategory(Categories category){
+        mainCategories.add(category);
+        mainCategoryCount++;
+
+        for (Categories sub : category.getSubcategories()) {
+            this.subCategoryCount++;
+        }
+
     }
-    public void title(String title){
-
-
-
+    public void showStats(){
+        System.out.println(mainCategoryCount);
+        System.out.println(subCategoryCount);
     }
 }
 
